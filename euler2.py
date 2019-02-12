@@ -21,8 +21,11 @@ from functools import reduce
 # Решите задачу двумя способами: с помощью map и lambda 
 # и с помощью генератора списка. 
 def diff():
-    # +++ ваш код +++
-    return
+    fsum = lambda x: x ** 2
+    l = sum(list(map(fsum, range(0, 101))))
+    j = sum(range(0, 101)) ** 2
+    result = l - j
+    return result
 
 
 # B. Найдите наибольшее произведение пяти последовательных цифр в 
@@ -61,7 +64,7 @@ def max_five(z):                        # оптимизация и описан
         j = str(s)
         for i in range(0, 5):
             l *= int(j[i])
-        return l - 1
+        return l
 
     def mda(n):
         c = []
